@@ -9,8 +9,8 @@ Prerequisites: Ensure you have a C++ compiler installed (e.g., GCC, Clang, MSVC)
 Clone the repository: https://github.com/raythegreat123/umath.git
 
 ### Compilation:
-g++ -c umath.cpp -o umath.o
-g++ main.cpp umath.o -o my_program
+- g++ -c umath.cpp -o umath.o
+- g++ main.cpp umath.o -o my_program
 
 ### Header File: 
 umath.h The header file defines the interface for the umath library, declaring all available functions.
