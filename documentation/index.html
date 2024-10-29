@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>umath Library Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>umath C++ Math Library Documentation</h1>
+        </header>
+
+        <section id="overview">
+            <h2>Overview</h2>
+            <p>The <code>umath</code> library is a comprehensive C++ math library that provides various mathematical functions, including basic arithmetic, algebra, geometry, trigonometry, statistics, and combinatorics.</p>
+        </section>
+
+        <section id="installation">
+            <h2>Installation</h2>
+            <ol>
+                <li><strong>Prerequisites:</strong> Ensure you have a C++ compiler installed (e.g., GCC, Clang, MSVC).</li>
+                <li><strong>Clone the repository</strong>:
+                    <pre><code>git clone https://github.com/raythegreat123/umath.git</code></pre>
+                </li>
+                <li><strong>Compilation:</strong>
+                    <pre><code>g++ -c umath.cpp -o umath.o
+g++ main.cpp umath.o -o my_program</code></pre>
+                </li>
+            </ol>
+        </section>
+
+        <section id="functions">
+            <h2>Functions</h2>
+            <h3>Basic Arithmetic</h3>
+            <ul>
+                <li><code>double add(double a, double b);</code></li>
+                <li><code>double subtract(double a, double b);</code></li>
+                <li><code>double multiply(double a, double b);</code></li>
+                <li><code>double divide(double a, double b);</code></li>
+            </ul>
+
+            <h3>Algebra</h3>
+            <ul>
+                <li><code>double quadraticRoot1(double a, double b, double c);</code></li>
+                <li><code>double quadraticRoot2(double a, double b, double c);</code></li>
+            </ul>
+
+            <h3>Geometry</h3>
+            <ul>
+                <li><code>double areaOfCircle(double radius);</code></li>
+                <li><code>double circumferenceOfCircle(double radius);</code></li>
+                <li><code>double areaOfSemicircle(double radius);</code></li>
+                <li><code>double perimeterOfSemicircle(double radius);</code></li>
+                <li><code>double areaOfRectangle(double length, double width);</code></li>
+                <li><code>double perimeterOfRectangle(double length, double width);</code></li>
+                <li><code>double areaOfParallelogram(double base, double height);</code></li>
+                <li><code>double perimeterOfParallelogram(double base, double sideLength);</code></li>
+                <li><code>double areaOfTrapezium(double base1, double base2, double height);</code></li>
+                <li><code>double perimeterOfTrapezium(double side1, double side2, double base1, double base2);</code></li>
+                <li><code>double areaOfRegularPolygon(int sides, double sideLength);</code></li>
+                <li><code>double perimeterOfRegularPolygon(int sides, double sideLength);</code></li>
+                <li><code>double interiorAngleOfPolygon(int sides);</code></li>
+                <li><code>double exteriorAngleOfPolygon(int sides);</code></li>
+            </ul>
+
+            <h3>Trigonometry</h3>
+            <ul>
+                <li><code>double sinDegrees(double angle);</code></li>
+                <li><code>double cosDegrees(double angle);</code></li>
+                <li><code>double tanDegrees(double angle);</code></li>
+            </ul>
+
+            <h3>Combinatorics</h3>
+            <ul>
+                <li><code>double combination(int n, int k);</code></li>
+                <li><code>double permutation(int n, int k);</code></li>
+            </ul>
+
+            <h3>Calculus</h3>
+            <ul>
+                <li><code>double derivative(double (*func)(double), double x, double h = 1e-6);</code></li>
+                <li><code>double integrate(double (*func)(double), double a, double b, int n = 1000);</code></li>
+            </ul>
+
+            <h3>Statistics</h3>
+            <ul>
+                <li><code>double mean(const double* values, int size);</code></li>
+                <li><code>double variance(const double* values, int size);</code></li>
+                <li><code>double standardDeviation(const double* values, int size);</code></li>
+                <li><code>double median(const double* values, int size);</code></li>
+                <li><code>double mode(const double* values, int size);</code></li>
+            </ul>
+
+            <h3>GCD and LCM</h3>
+            <ul>
+                <li><code>int gcd(int a, int b);</code></li>
+                <li><code>int lcm(int a, int b);</code></li>
+            </ul>
+        </section>
+
+        <section id="usage">
+            <h2>Usage Example</h2>
+            <pre><code>
+#include &lt;iostream&gt;
+#include &lt;umath.h&gt;
+
+int main() {
+    double radius = 5.0;
+    std::cout &lt;&lt; "Area of Circle: " &lt;&lt; umath::areaOfCircle(radius) &lt;&lt; std::endl;
+    std::cout &lt;&lt; "Circumference of Circle: " &lt;&lt; umath::circumferenceOfCircle(radius) &lt;&lt; std::endl;
+
+    int a = 10, b = 15;
+    std::cout &lt;&lt; "GCD of " &lt;&lt; a &lt;&lt; " and " &lt;&lt; b &lt;&lt; ": " &lt;&lt; umath::gcd(a, b) &lt;&lt; std::endl;
+    std::cout &lt;&lt; "LCM of " &lt;&lt; a &lt;&lt; " and " &lt;&lt; b &lt;&lt; ": " &lt;&lt; umath::lcm(a, b) &lt;&lt; std::endl;
+
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section id="error-handling">
+            <h2>Error Handling</h2>
+            <p>The library functions throw <code>std::invalid_argument</code> exceptions for invalid inputs, such as division by zero, negative factorial requests, or invalid geometric parameters.</p>
+        </section>
+
+        <footer>
+            <p>© 2024 umath Library. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

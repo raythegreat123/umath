@@ -1,0 +1,3 @@
+g++ -c umath.cpp -o umath.o
+g++ main.cpp umath.o -o my_program.exe
+my_program.exe
